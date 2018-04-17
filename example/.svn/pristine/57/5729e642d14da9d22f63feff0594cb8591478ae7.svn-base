@@ -1,0 +1,1 @@
+webpackJsonp([4],{ARoL:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"dashboard-container"},[this._v("\n  首页\n")])},staticRenderFns:[]},r=t("VU/8")({name:"dashboard",data:function(){return{}}},a,!1,null,null,null);n.default=r.exports}});

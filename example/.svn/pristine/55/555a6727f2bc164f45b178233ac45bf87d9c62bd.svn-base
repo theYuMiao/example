@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.RrelationDao">
+
+    <select id="countUser" resultType="Integer">
+        SELECT count(0)
+        FROM sys_user u
+        WHERE u.delete_status = '1'
+    </select>
+
+    <select id="custRelationList" resultType="com.alibaba.fastjson.JSONObject">
+        select * from record_relation 
+    </select>
+    
+    <select id="custRelationST" resultType="com.alibaba.fastjson.JSONObject">
+        select distinct ct_source as source, ct_target as target from record_relation 
+    </select>
+    
+</mapper>

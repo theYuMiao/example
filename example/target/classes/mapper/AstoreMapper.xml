@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.AstoreDao">
+
+    
+    <select id="business" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT * from analysis_store inner join analysis_type ON analysis_store.ct_type_id = analysis_type.id where 1=1	
+        <if test="business != null and business != '' ">
+        	and business like CONCAT('%', #{business}, '%')
+        </if>
+    </select>
+
+     <update id="updateLocationBusiness">
+        UPDATE analysis_store
+        SET lng = #{lng}, lat =#{lat}, business = #{business}
+        WHERE id = #{id}
+    </update>
+    
+</mapper>
